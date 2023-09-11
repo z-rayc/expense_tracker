@@ -1,5 +1,5 @@
-# expense_tracker
-A Flutter project.
+# Expense Tracker
+A Flutter project. An app where you can add expenses in different categories. (No persistence between sessions).
 
 ### Overview of expenses
 ![The initial page](https://github.com/z-rayc/expense_tracker/blob/main/docs/screenshot_1.png)
