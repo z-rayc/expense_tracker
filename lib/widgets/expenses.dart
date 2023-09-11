@@ -82,8 +82,19 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
-    Widget expensesList =
-        const Center(child: Text('No expenses found. Start adding some!'));
+    /// The initial widget, if there are no expenses registered yet
+    Widget expensesList = Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const Text('No expenses found.'),
+        const SizedBox(height: 10),
+        ElevatedButton(
+          onPressed: _openAddExpensesOverlay,
+          child: const Text('Get started!'),
+        ),
+      ],
+    );
 
     if (_registeredExpenses.isNotEmpty) {
       expensesList = ExpensesList(
