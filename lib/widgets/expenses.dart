@@ -37,6 +37,8 @@ class _ExpensesState extends State<Expenses> {
   void _openAddExpensesOverlay() {
     // When you are in a class that extends state, a global context is available
     showModalBottomSheet(
+      useSafeArea:
+          true, // Takes camera, etc. into consideration if it affects the UI
       context: context,
       isScrollControlled: true,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
