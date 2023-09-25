@@ -62,7 +62,7 @@ class _ExpensesState extends State<Expenses> {
         .clearSnackBars(); // Prevent queue on multiple dismisses
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        duration: const Duration(seconds: 20),
+        duration: const Duration(seconds: 5),
         content: const Text('Expense deleted.'),
         action: SnackBarAction(
           label: 'Undo',
