@@ -124,7 +124,18 @@ class _ExpensesState extends State<Expenses> {
             ])
           : Row(children: [
               Expanded(child: Chart(expenses: _registeredExpenses)),
-              Expanded(child: expensesList),
+              Expanded(
+                child: Column(
+                  children: [
+                    ExpensesLastMonth(_registeredExpenses),
+                    Expanded(
+                      child: ExpensesList(
+                          expenses: _registeredExpenses,
+                          onRemoveExpense: _removeExpense),
+                    ),
+                  ],
+                ),
+              )
             ]),
     );
   }
